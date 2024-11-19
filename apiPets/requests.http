@@ -1,0 +1,94 @@
+###
+POST http://localhost:9000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "adrewssss_pezas@example.com",
+  "contraseña": "123456"
+}
+###
+POST http://localhost:9000/api/users/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "adrewsssss pezera",
+    "email": "adrewsssss_pezas@example.com",
+    "contraseña": "123456",
+    "rol": "admin"
+}
+
+###
+GET http://localhost:9000/api/users/list HTTP/1.1
+###
+GET http://localhost:9000/api/users/670ee09497379d0ae7cda3bc/view HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzI0ZDI2Y2YxYWM0ODJlNDU1ZjUxOWUiLCJlbWFpbCI6ImFkcmV3c19wZXphc0BleGFtcGxlLmNvbSIsImlhdCI6MTczMDQ2NjQzOSwiZXhwIjoxNzMwNDcwMDM5fQ.JFPldXHH08ERDNlR-EiLX_prju7ZRnRkCFBPC3OhslM
+###
+PUT http://localhost:9000/api/users/670ee09497379d0ae7cda3bc/update HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDk0NzI4LCJleHAiOjE3MjkwOTgzMjh9.pgjjG37Jj9JcAgMEUNHjXmBar8sNWr6V2ISEJft1N1w
+
+{
+    "nombre": "jhon D does",
+    "email": "john.ddoe@example.com"
+}
+
+###
+DELETE http://localhost:9000/api/users/670ee6a74b8aa3d4616ea6b4/delete HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTA5NDk3Mzc5ZDBhZTdjZGEzYmMiLCJlbWFpbCI6ImpvaG4uZGRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTcyOTIzMzQxMCwiZXhwIjoxNzI5MjM3MDEwfQ.Qn1dCfvA1meyBTBRpZCTBArhK4laIwRCdu6R1dzoXBc
+
+###
+POST http://localhost:9000/api/pets/create HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTA5NDk3Mzc5ZDBhZTdjZGEzYmMiLCJlbWFpbCI6ImpvaG4uZGRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTcyOTIzMzQxMCwiZXhwIjoxNzI5MjM3MDEwfQ.Qn1dCfvA1meyBTBRpZCTBArhK4laIwRCdu6R1dzoXBc
+
+
+{
+   "name": "laou",
+  "type": "cat",
+  "sex": "male",
+  "breed": "comun",
+  "birthdate": "2021-03-01T00:00:00Z",
+  "age": 4,
+  "weight": 1,
+  "height": 2,
+  "temperament": "friendly",
+  "chipNumber": "12345673",
+  "description": "Very playful cat",
+  "owners": ["670ee09497379d0ae7cda3bc"]
+}
+
+###
+GET http://localhost:9000/api/pets/listAll HTTP/1.1
+
+###
+GET http://localhost:9000/api/pets/list HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTA5NDk3Mzc5ZDBhZTdjZGEzYmMiLCJlbWFpbCI6ImpvaG4uZGRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTcyOTIzMzQxMCwiZXhwIjoxNzI5MjM3MDEwfQ.Qn1dCfvA1meyBTBRpZCTBArhK4laIwRCdu6R1dzoXBc
+###
+GET http://localhost:9000/api/pets/670f00c9f41bd3d69a6e50d9/view HTTP/1.1
+Content-Type: application/json
+###
+PUT http://localhost:9000/api/pets/670f06d5f41bd3d69a6e50e4/update HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTdjZjRiOGFhM2Q0NjE2ZWE2Y2IiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI5MDkyNDI2LCJleHAiOjE3MjkwOTYwMjZ9.CoJ_W71YMGDUd0MoJ1bJoCF40EmtGQwQQMrVOUENkuM
+
+{
+   "name": "sisifos",
+  "type": "gato",
+  "sex": "male",
+  "breed": "comun",
+  "birthdate": "2019-03-01T00:00:00Z",
+  "age": 6,
+  "weight": 12,
+  "height": 3,
+  "temperament": "friendly",
+  "chipNumber": "1234563434",
+  "description": "Very playful dog",
+  "owners": ["670f00a5f41bd3d69a6e50d5","670ee6a74b8aa3d4616ea6b4"]
+}
+
+###
+DELETE http://localhost:9000/api/pets/670f00c9f41bd3d69a6e50d9/delete HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzBlZTA5NDk3Mzc5ZDBhZTdjZGEzYmMiLCJlbWFpbCI6ImpvaG4uZGRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTcyOTIzMzQxMCwiZXhwIjoxNzI5MjM3MDEwfQ.Qn1dCfvA1meyBTBRpZCTBArhK4laIwRCdu6R1dzoXBc
